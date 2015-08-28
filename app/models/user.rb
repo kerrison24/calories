@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :calories
   has_many :weights
+  has_one :profile
 end
