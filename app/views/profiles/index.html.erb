@@ -1,2 +1,8 @@
-<h1>Profiles#index</h1>
-<p>Find me in app/views/profiles/index.html.erb</p>
+<h1>Your Profile</h1>
+Email: <%= @user.email %><br>
+
+<% if @profile.goal.nil? %>
+  <%= link_to 'What is your goal?', edit_profile_path(@profile) %>
+<% else %>
+  <p>Your Goal: <%= @profile.goal %> weight (<%= link_to 'Update your goal', edit_profile_path(@profile) %>)</p>
+<% end %>

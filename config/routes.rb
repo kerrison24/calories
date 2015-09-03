@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'profile' => 'profiles#index'
 
-  resources :profile
+  resources :profiles
 
   devise_for :users, controllers: { registrations: "users/registrations" }
   root 'static_pages#index'
